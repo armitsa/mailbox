@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #95C0CB;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="staff.item.StaffItemController">
+   <children>
+      <Button fx:id="backBtn" layoutX="745.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleBackBtnAction" text="Back" />
+      <HBox layoutX="53.0" layoutY="106.0" prefHeight="463.0" prefWidth="504.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="itemListTable" prefHeight="463.0" prefWidth="500.0">
+                    <columns>
+                      <TableColumn fx:id="type" prefWidth="100.0" text="Type" />
+                        <TableColumn fx:id="room" prefWidth="100.0" text="Room" />
+                        <TableColumn fx:id="date" prefWidth="150.0" text="Time" />
+                        <TableColumn fx:id="nameRec" prefWidth="150.0" text="Name Receive" />
+                        <TableColumn fx:id="surRec" prefWidth="150.0" text="Surname Receive" />
+                        <TableColumn fx:id="size" prefWidth="75.0" text="Size" />
+                        <TableColumn fx:id="nameSend" prefWidth="150.0" text="Name Sender" />
+                        <TableColumn fx:id="surSend" prefWidth="150.0" text="Surname Sender" />
+                        <TableColumn fx:id="address" prefWidth="300.0" text="Address" />
+                        <TableColumn fx:id="priority" prefWidth="75.0" text="Priority" />
+                        <TableColumn fx:id="deliComp" prefWidth="75.0" text="Delivery Comp." />
+                        <TableColumn fx:id="tracking" prefWidth="100.0" text="Tracking Number" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <VBox layoutX="557.0" layoutY="106.0" prefHeight="463.0" prefWidth="226.0">
+         <children>
+            <AnchorPane prefHeight="476.0" prefWidth="226.0">
+               <children>
+                  <Button fx:id="addBtn" layoutX="79.0" layoutY="299.0" maxHeight="30.0" maxWidth="80.0" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" onAction="#handleAddBtnAction" prefHeight="30.0" prefWidth="80.0" text="Add" />
+                  <Label layoutX="14.0" layoutY="14.0" text="SEARCH BY ROOM" textFill="WHITE" />
+                  <ComboBox fx:id="sortBox" layoutX="44.0" layoutY="123.0" prefWidth="150.0" promptText="Sort by" />
+                  <TextField fx:id="roomText" layoutX="45.0" layoutY="42.0" promptText="Enter room Ex. A11" />
+                  <Button fx:id="removeBtn" layoutX="79.0" layoutY="370.0" maxHeight="30.0" maxWidth="80.0" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" onAction="#handleRemoveBtnAction" prefHeight="30.0" prefWidth="80.0" text="Remove" />
+                  <Button fx:id="searchBtn" layoutX="89.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleSearchBtnOnAction" text="SEARCH" />
+                  <Button fx:id="sortBtn" layoutX="79.0" layoutY="167.0" mnemonicParsing="false" onAction="#handleSortAction" prefHeight="30.0" prefWidth="80.0" text="Sort" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Label layoutX="53.0" layoutY="28.0" text="Item List" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="refreshBtn" layoutX="53.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleRefreshBtnAction" text="Refresh" />
+   </children>
+</AnchorPane>

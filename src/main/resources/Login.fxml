@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account.LoginController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="598.0" prefWidth="321.0" style="-fx-background-color: #95C0CB;">
+         <children>
+            <AnchorPane prefHeight="598.0" prefWidth="342.0">
+               <children>
+                  <ImageView fitHeight="224.0" fitWidth="224.0" layoutX="48.0" layoutY="140.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@picture/box.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="387.0" prefHeight="46.0" prefWidth="134.0" text="MailBox" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@picture/id-card.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="aboutMeBtn" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleAboutMeBtnAction" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: none;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="409.0" layoutY="110.0" prefHeight="379.0" prefWidth="350.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="69.0" layoutY="91.0">
+                     <image>
+                        <Image url="@picture/lock.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="70.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@picture/user.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="usernameField" alignment="CENTER" layoutX="105.0" layoutY="54.0" prefHeight="26.0" prefWidth="150.0" promptText="Enter Username" />
+                  <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="105.0" layoutY="94.0" prefHeight="26.0" prefWidth="150.0" promptText="Enter Password" />
+                  <Button fx:id="loginBtn" alignment="CENTER" defaultButton="true" layoutX="116.0" layoutY="139.0" mnemonicParsing="false" onAction="#handleLoginBtnAction" prefHeight="30.0" prefWidth="134.0" text="Login" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="756.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@picture/info.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="guideBtn" layoutX="753.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleGuideBtnAction" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: none;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

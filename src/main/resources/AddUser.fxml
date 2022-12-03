@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #95C0CB;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="staff.room.AddUserController">
+   <children>
+      <Button fx:id="backBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="734.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackBtnAction" text="Back" />
+      <Label layoutX="69.0" layoutY="78.0" text="Add user " textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <HBox layoutX="90.0" layoutY="168.0" prefHeight="370.0" prefWidth="620.0">
+         <children>
+            <AnchorPane prefHeight="370.0" prefWidth="622.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="26.0" layoutY="26.0" text="Name :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameField" layoutX="85.0" layoutY="26.0" prefHeight="26.0" prefWidth="198.0" promptText="Enter name" />
+                  <Label layoutX="150.0" layoutY="90.0" text="Building :" />
+                  <ComboBox fx:id="buildBox" layoutX="235.0" layoutY="85.0" prefWidth="150.0" />
+                  <Label layoutX="150.0" layoutY="140.0" text="Floor :" />
+                  <ComboBox fx:id="floorBox" layoutX="235.0" layoutY="136.0" prefWidth="150.0" />
+                  <Label layoutX="150.0" layoutY="190.0" text="Room :" />
+                  <ComboBox fx:id="roomBox" layoutX="235.0" layoutY="186.0" prefWidth="150.0" />
+                  <Label layoutX="150.0" layoutY="240.0" text="Type :" />
+                  <ComboBox fx:id="typeRoomBox" layoutX="235.0" layoutY="236.0" prefWidth="150.0" />
+                  <Button fx:id="createBtn" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="285.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleCreateBtnAction" text="Create" textAlignment="CENTER" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

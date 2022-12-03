@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #95C0CB;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.RegisterController">
+   <children>
+      <HBox layoutX="125.0" layoutY="128.0" prefHeight="375.0" prefWidth="550.0">
+         <children>
+            <AnchorPane prefHeight="375.0" prefWidth="550.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="100.0" layoutY="60.0" text="Name :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="100.0" layoutY="120.0" text="Username :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="101.0" layoutY="180.0" text="Password :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="name" layoutX="200.0" layoutY="60.0" promptText="Enter name" />
+                  <TextField fx:id="username" layoutX="200.0" layoutY="120.0" promptText="Enter Username" />
+                  <TextField fx:id="password" layoutX="200.0" layoutY="180.0" promptText="Enter Password" />
+                  <Button fx:id="register" layoutX="249.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleRegisterBtnAction" text="Register" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Label layoutX="63.0" layoutY="68.0" text="Register" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="backBtn" layoutX="745.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackBtnAction" text="Back" />
+   </children>
+</AnchorPane>
